@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+<!--<meta name=viewport content="width=device-width,initial-scale=1">-->
+
+<!--    RevealJS--->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/blood.css" />
+
+<!--[if gte IE 9]>
+<style type="text/css">
+.gradient {
+filter: none;
+}
+</style>
+<![endif]-->
+<link href='https://fonts.googleapis.com/css?family=Raleway:300,400,500&subset=latin' rel='stylesheet' type='text/css'>
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<!--TODO check <style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>-->
+
+<!-- This site is optimized with the Yoast SEO plugin v23.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>AAM-SEALS</title>
+<meta name="description" content="The project website for our paper AAM-SEALS: Developing Aerial-Aquatic Manipulators in SEa, Air, and Land Simulator." />
+<link rel="canonical" href="https://aam-seals.github.io/aam-seals-v1/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AAM-SEALS" />
+<meta property="og:description" content="The project website for our paper AAM-SEALS: Developing Aerial-Aquatic Manipulators in SEa, Air, and Land Simulator." />
+<meta property="og:url" content="https://aam-seals.github.io/aam-seals-v1/" />
+<meta property="og:site_name" content="AAM-SEALS" />
+
+<link rel="stylesheet" type="text/css" href="//zone1-1d947.kxcdn.com/wp-content/cache/wpfc-minified/ml8p18r8/a879i.css" media="all"/>
+
+<style>
+
+    .btn-3D { position: absolute; top: 20px; right: 20px; }
+</style>
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<!-- <link rel='stylesheet' id='wp-pagenavi-css' href='//zone1-1d947.kxcdn.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='default_style-css' href='//zone1-1d947.kxcdn.com/wp-content/themes/nouveau/style.css?ver=6.6.2' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='qode-font-awesome-css' href='//zone1-1d947.kxcdn.com/wp-content/themes/nouveau/css/font-awesome/css/font-awesome.min.css?ver=6.6.2' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='stylesheet-css' href='//zone1-1d947.kxcdn.com/wp-content/themes/nouveau/css/stylesheet.min.css?ver=6.6.2' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='style_dynamic-css' href='https://tigerhousefilms.com/wp-content/themes/nouveau/css/style_dynamic.php?ver=6.6.2' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='responsive-css' href='//zone1-1d947.kxcdn.com/wp-content/themes/nouveau/css/responsive.min.css?ver=6.6.2' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='js_composer_front-css' href='//zone1-1d947.kxcdn.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.7' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='custom_css-css' href='https://tigerhousefilms.com/wp-content/themes/nouveau/css/custom_css.php?ver=6.6.2' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//zone1-1d947.kxcdn.com/wp-content/cache/wpfc-minified/q5gm4w4k/a879i.css" media="all"/>
+<script src='//zone1-1d947.kxcdn.com/wp-content/cache/wpfc-minified/kl5lz6vk/a879i.js' type="text/javascript"></script>
+<!-- <script type="text/javascript" src="//zone1-1d947.kxcdn.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=9.2.0" id="monsterinsights-frontend-script-js" async="async" data-wp-strategy="async"></script> -->
+<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/tigerhousefilms.com","hash_tracking":"false","v4_id":"G-7DEP89XTJ2"};/* ]]> */
+</script>
+<script src='//zone1-1d947.kxcdn.com/wp-content/cache/wpfc-minified/efwkokrg/f9lk1.js' type="text/javascript"></script>
+<!-- <script type="text/javascript" src="//zone1-1d947.kxcdn.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script> -->
+<!-- <script type="text/javascript" src="//zone1-1d947.kxcdn.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script> -->
+
+<!--Our CSS  -->
+<link rel="stylesheet" href="./static/css/index.css">
+<link rel="stylesheet" href="./static/css/window-carousel.css">
+<link rel="stylesheet" href="./static/css/tv-effect.css">
+<script src="./static/js/tv-effect.js" type="text/javascript"></script>
+
+
+<!--[if lte IE 9]>
+<link rel="stylesheet" type="text/css" href="//zone1-1d947.kxcdn.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><style type="text/css">.broken_link, a.broken_link {
+text-decoration: line-through;
+}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	
+</head>
+<body class="home page-template page-template-full_width page-template-full_width-php page page-id-20996  wpb-js-composer js-comp-ver-5.7 vc_responsive">
+<div class="ajax_loader"><div class="ajax_loader_1"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div></div>
+<section class="side_menu right">
+<div class="side_menu_title">
+</div>
+</section>
+<div class="wrapper">
+<div class="wrapper_inner">
+<!-- Google Analytics start -->
+<!-- Google Analytics end -->
+<header class="page_header   fixed  light ">
+<div class="header_inner clearfix">
+<div class="header_top_bottom_holder">
+<div class="header_bottom clearfix" style='' >
+<!--<div class="header_inner_left">-->
+<!--<div class="mobile_menu_button"><span><i class="fa fa-bars"></i></span></div>-->
+<!--<div class="logo_wrapper">-->
+<!--<div class="q_logo"><a href="https://tigerhousefilms.com/"><img class="normal" src="//zone1-1d947.kxcdn.com/wp-content/uploads/Tiger-House-Studios-Symbol_Black-Version.png" alt="Logo"/><img class="light" src="//zone1-1d947.kxcdn.com/wp-content/uploads/Tiger-House-Studios-Symbol_White-Version.png" alt="Logo"/><img class="dark" src="//zone1-1d947.kxcdn.com/wp-content/uploads/Tiger-House-Studios-Symbol_Black-Version.png" alt="Logo"/><img class="sticky" src="//zone1-1d947.kxcdn.com/wp-content/uploads/Tiger-House-Studios-Symbol_Black-Version.png" alt="Logo"/></a></div>-->
+<!--</div>-->
+<!--</div>-->
+<div class="header_inner_right">
+<div class="side_menu_button_wrapper right">
+<div class="side_menu_button">
+<a class="side_menu_button_link" href="javascript:void(0)">
+<i class="fa fa-bars"></i>
+</a>                                    </div>
+</div>
+</div>
+<nav class="main_menu drop_down right">
+<ul id="menu-top-menu-2024" class=""><li id="nav-menu-item-20925" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow"><a href="" target="_blank" class=""><i class="menu_icon fa blank"></i><span>Paper</span><span class="line"></span></a>
+<div class="second bellow_header"><div class="inner"><div class="inner_arrow"></div><ul>
+<li id="nav-menu-item-20926" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="" target="_blank" class=""><i class="menu_icon fa blank"></i><span>Paper</span><span class="line"></span></a></li>
+<li id="nav-menu-item-20927" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="" target="_blank" class=""><i class="menu_icon fa blank"></i><span>Slides</span><span class="line"></span></a></li>
+<li id="nav-menu-item-20928" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="" target="_blank" class=""><i class="menu_icon fa blank"></i><span>Poster</span><span class="line"></span></a></li>
+</ul></div></div>
+</li>
+
+<li id="nav-menu-item-20950" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow"><a href="" class=""><i class="menu_icon fa blank"></i><span>Video</span><span class="line"></span></a>
+<div class="second bellow_header"><div class="inner"><div class="inner_arrow"></div><ul>
+<!--<li id="nav-menu-item-20936" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="" target="_blank" class=""><i class="menu_icon fa blank"></i><span>Overview</span><span class="line"></span></a></li>-->
+<li id="nav-menu-item-20932" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="" target="_blank" class=""><i class="menu_icon fa blank"></i><span>Overview</span><span class="line"></span></a></li>
+</ul></div></div>
+</li>
+
+<li id="nav-menu-item-20930" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow"><a href="" class=""><i class="menu_icon fa blank"></i><span>Software</span><span class="line"></span></a>
+<div class="second bellow_header"><div class="inner"><div class="inner_arrow"></div><ul>
+<li id="nav-menu-item-20931" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="" target="_blank" class=""><i class="menu_icon fa blank"></i><span>Install</span><span class="line"></span></a></li>
+</ul></div></div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</header>
+
+<a id='back_to_top' href='#'>
+<span class="fa-stack">
+<i class="fa fa-angle-up " style=""></i>
+</span>
+</a>
+
+<div class="content ">
+<div class="content_inner no_animation " style="">
+    <div class="q_slider">
+        <div class="q_slider_inner">
+            <div id="qode-home-slider" class="carousel slide full_screen  q_auto_start header_effect  header_not_transparent" data-slide_animation="6000"  data-parallax="yes" style=" ">
+                <div class="qode_slider_preloader" style="">
+                    <div class="ajax_loader_slider" >
+                        <div class="ajax_loader_1">
+                            <section class="screen_tv">
+                                <div class="content_tv">
+                                    <p class="carousel-center" style="font-size:30pt; color:yellow; overflow: visible; left:-6%;">A demo video is coming</p>
+                                    <div class="spinner" style="z-index: 1100; top:80%; left:838px;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-inner" data-start="transform: translateY(0px);" data-1440="transform: translateY(-900px);">
+                    <div class="item dark">
+                        <!-- Video container with video and overlay icon -->
+                        <div class="video-container">
+                            <!-- Video window to be enlarged on hover or click -->
+                                <div class="video" id="enlarge-window">
+
+                                    <div class="video-wrap">
+                                        <video class="video" controls="controls" preload="auto" loop autoplay muted>
+                                            <source type="video/mp4" src="media/videos/catch_crab_air.mp4">
+
+                                        </video>
+                                    </div>
+                                </div>
+
+                            <!-- Zoom Icon for Left Sub-Window -->
+                                <div class="icon-container">
+                                    <img src="static/images/icon_snipper.png" alt="Zoom Icon" class="icon" onclick="toggleZoom('enlarge-window')">
+                                </div>
+
+
+<!--                            &lt;!&ndash; Icon overlay for triggering enlargement &ndash;&gt;-->
+<!--                            <div class="icon-container">-->
+<!--                                <img src="static/images/icon_snipper.png" alt="Icon" class="icon" id="enlarge-window">-->
+<!--                            </div>-->
+                        </div>
+                    </div>
+                </div>
+
+
+<!--    Yantian-->
+<div class="slider_content_outer"><div class="slider_content " style="width:50%;left: 25%;top: 20%;" data-start="width:50%; opacity:1; left: 25%; top: 20%;" data-300="opacity: 0; left: 25%; top: 10%;"><div class="text"><h4 style=""><span></span></h4><h2 style=""><span></span></h2></div></div></div></div></div></div>			</div></div>
+<div class="full_width">
+<div class="full_width_inner">
+<p>
+    <nav  class="content_menu">
+    <div class='nav_select_menu clearfix'>
+        <div class='nav_select_button'>
+            <i class='fa fa-bars'></i>
+        </div>
+    </div>
+    </nav>
+
+    <div     class="vc_row wpb_row section  grid_section" style='background-color:#f8f8f8; padding-top:55px; padding-bottom:0px; text-align:center;'>
+
+<!--Add Icons-->
+<!--<span class='q_social_icon_holder'><a href='http://www.facebook.com/Tiger-House-Films-172387246147152' target='_blank' rel="noopener"><span class='fa-stack fa-2x square_social' style='background-color: #1b1b1b;'><i class='fa fa-facebook' style=''></i></span><span class='fa-stack fa-2x square_social social_share_hover facebook' style=''><i class='fa fa-facebook' style=''></i></span></a></span>-->
+<!--<span class='q_social_icon_holder'><a href='https://www.instagram.com/tigerhousefilms/' target='_blank' rel="noopener"><span class='fa-stack fa-2x square_social' style='background-color: #1b1b1b;'><i class='fa fa-instagram' style=''></i></span><span class='fa-stack fa-2x square_social social_share_hover instagram' style=''><i class='fa fa-instagram' style=''></i></span></a></span>-->
+<!--<span class='q_social_icon_holder'><a href='http://linkedin.com/company/2209784?trk=vsrp_companies_cluster_name&trkInfo=VSRPsearchId%3A1148621521464136911129%2CVSRPtargetId%3A2209784%2CVSRPcmpt%3Acompanies_cluster' target='_blank' rel="noopener"><span class='fa-stack fa-2x square_social' style='background-color: #1b1b1b;'><i class='fa fa-linkedin' style=''></i></span><span class='fa-stack fa-2x square_social social_share_hover linkedin' style=''><i class='fa fa-linkedin' style=''></i></span></a></span>-->
+
+<nav class="main_menu drop_down">
+    <ul id="menu-top-menu-2025" class="">
+        <li id="nav-menu-item-30925" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
+<!--            <a href="https://tigerhousefilms.com/portfolio-2/" class="">-->
+                <span class='q_social_icon_holder'>
+                    <a href='' target='_blank' rel="noopener">
+                        <span class='fa-stack fa-2x square_social' style='background-color: ghostwhite; width: 100px; height:70px;'>
+                            <img class="social-icon bounce" src='static/images/icon_paper_2.png' alt='Paper Icon' style='width: 70px; height: 70px;' />
+                        </span>
+                    </a>
+                </span>
+            </a>
+
+            <div class="second bellow_header">
+                <div class="inner">
+                    <div class="inner_arrow"></div>
+                    <ul>
+                        <li id="nav-menu-item-30926" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="" target="_blank" class=""><i class="menu_icon fa blank"></i><span>Paper</span><span class="line"></span></a></li>
+                        <li id="nav-menu-item-30927" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="" target="_blank" class=""><i class="menu_icon fa blank"></i><span>Slides</span><span class="line"></span></a></li>
+                        <li id="nav-menu-item-30930" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="" target="_blank" class=""><i class="menu_icon fa blank"></i><span>Poster</span><span class="line"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li id="nav-menu-item-30928" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
+                <i class="menu_icon fa blank"></i>
+                <span class='q_social_icon_holder'>
+                    <a href='' target='_blank' rel="noopener">
+                        <span class='fa-stack fa-2x square_social' style='background-color: ghostwhite; width: 100px; height:70px;'>
+                            <img class="social-icon bounce" src='static/images/icon_video.png' alt='Video Icon' style='width: 70px; height: 70px;' />
+                        </span>
+                    </a>
+                </span>
+
+            <div class="second bellow_header">
+                <div class="inner">
+                    <div class="inner_arrow"></div>
+                    <ul>
+<!--                        <li id="nav-menu-item-30936" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="" target="_blank" class=""><i class="menu_icon fa blank"></i><span>Overview</span><span class="line"></span></a></li>-->
+                        <li id="nav-menu-item-30932" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="" target="_blank" class=""><i class="menu_icon fa blank"></i><span>Overview</span><span class="line"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+
+        <li id="nav-menu-item-20966" class="menu-item menu-item-type-custom menu-item-object-custom  narrow">
+                <i class="menu_icon fa blank"></i>
+                <span class='q_social_icon_holder'>
+                        <span class='fa-stack fa-2x square_social' style='background-color: ghostwhite; width: 100px; height:70px;'>
+                            <img class="social-icon bounce" src='static/images/icon_code_2.png' alt='Code Icon' style='width: 70px; height:70px;' />
+                        </span>
+                </span>
+            </a>
+
+            <div class="second bellow_header">
+                <div class="inner">
+                    <div class="inner_arrow"></div>
+                    <ul>
+                        <li id="nav-menu-item-30931" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="" target="_blank" class=""><i class="menu_icon fa blank"></i><span>Install</span><span class="line"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<div class="separator  transparent   " style="margin-top:34px;margin-bottom:0px;"></div>
+
+
+<!--<span class='q_social_icon_holder'>-->
+<!--    <a href='https://aam-seals.github.io/aam-seals-v1/' target='_blank' rel="noopener">-->
+<!--        <span class='fa-stack fa-2x square_social' style='background-color: ghostwhite;'>-->
+<!--            <img src='static/images/icon_paper_2.png' alt='Paper Icon' style='width: 80px;' />-->
+<!--        </span>-->
+<!--    </a>-->
+<!--</span>-->
+
+<!--<span class='q_social_icon_holder'>-->
+<!--    <a href='https://aam-seals.github.io/aam-seals-v1/' target='_blank' rel="noopener">-->
+<!--        <span class='fa-stack fa-2x square_social' style='background-color: ghostwhite;'>-->
+<!--            <img src='static/images/icon_video.png' alt='Video Icon' style='width: 60px;' />-->
+<!--        </span>-->
+<!--    </a>-->
+<!--</span>-->
+
+<!--<span class='q_social_icon_holder'>-->
+<!--    <a href='https://aam-seals.github.io/aam-seals-v1/' target='_blank' rel="noopener">-->
+<!--        <span class='fa-stack fa-2x square_social' style='background-color: ghostwhite;'>-->
+<!--            <img src='static/images/icon_code_2.png' alt='Code Icon' style='width: 90px;' />-->
+<!--        </span>-->
+<!--    </a>-->
+<!--</span>-->
+
+
+<!--        End Icons-->
+        <div class=" section_inner clearfix">
+            <div class='section_inner_margin clearfix'>
+                <div class="  yes">
+                    <div>
+<!--                        A Small Line Artistic Separator-->
+<!--                        <div class="separator  small center  " style="margin-top:26px;margin-bottom:0px;width:26%;"></div>-->
+                        <div class="separator  transparent   " style="margin-top:34px;margin-bottom:0px;"></div>
+                        <div class='projects_holder_outer v4'><div class='projects_holder clearfix v4 gallery'>
+                        <div class='filler'></div>
+                        <div class='filler'></div>
+
+                         <section class="hero">
+                          <div class="hero-body">
+                            <div class="container is-fullhd">
+                              <div class="columns is-centered">
+                                <div class="column has-text-centered">
+                                    <h1 class="publication-title"><span style="color: #13B3AC;font-size:55px">AAM-SEALS</span>: Developing <span style="color: #13B3AC;font-size:55px">A</span>erial-<span style="color: #13B3AC;font-size:55px">A</span>quatic <span style="color: #13B3AC;font-size:55px">M</span>anipulators in <span style="color: #13B3AC;font-size:55px">SE</span>a, <span style="color: #13B3AC;font-size:55px">A</span>ir, and <span style="color: #13B3AC;font-size:55px">L</span>and <span style="color: #13B3AC;font-size:55px">S</span>imulator</h1>
+                                </div>
+                                <div class="is-size-5 publication-authors">
+                                        <span class="author-block" style="font-size:18px">
+                                          <p>Author Names Omitted for Anonymous Review. Paper-ID [48]</p>,
+                                        </span>
+
+                                    </div>
+
+
+
+                          </div>
+                        </div>
+                        </div>
+                        </section>
+
+                        </div>
+
+<!--&lt;!&ndash;                            Load More Button&ndash;&gt;-->
+<!--                        <div class="portfolio_load_more center ">-->
+<!--                            <span rel="5" class="q_load_more">-->
+<!--                                <a href="https://tigerhousefilms.com/page/2/" >LOAD MORE</a>-->
+<!--                            </span>-->
+<!--                        </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <div     class="vc_row wpb_row section  grid_section" style='background-color:#f8f8f8; padding-top:56px; text-align:left;'>
+     <div class=" section_inner clearfix">
+         <div class='section_inner_margin clearfix'>
+             <div class="wpb_column vc_column_container vc_col-sm-12">
+                 <div class="vc_column-inner">
+                     <div class="wpb_wrapper">
+<!--                         <div class="separator  small center  " style="margin-top:26px;margin-bottom:34px;width:96%;"></div>-->
+                     </div>
+                    <div class="column is-four-fifths">
+                        <div class="content has-text-justified abstract">
+                          <p>
+                              Current mobile manipulators and high-fidelity simulators lack the ability to seamlessly operate and simulate across integrated environments spanning sea, air, and land. To address this gap, we introduce <span style="color: #13B3AC;">A</span>erial-<span style="color: #13B3AC;">A</span>quatic <span style="color: #13B3AC;">M</span>anipulators (AAM) in <span style="color: #13B3AC;">SE</span>a, <span style="color: #13B3AC;">A</span>ir, and <span style="color: #13B3AC;">L</span>and <span style="color: #13B3AC;">S</span>imulator (SEALS), a comprehensive and photorealistic simulator designed for AAMs to operate and learn in these diverse environments. The development of AAM-SEALS tackles several significant challenges, including the creation of integrated controllers for flying, swimming, and manipulation, and the high-fidelity simulation of aerial dynamics and hydrodynamics leveraging particle physics. Our comprehensive evaluation demonstrates that our AAM operates smoothly in the SEALS, reflecting photorealistic transitions across air, water, and air-water interfaces. We quantitatively demonstrate the benefits of particle-based hydrodynamics by comparing position-tracking errors across different dynamic systems. AAM-SEALS promises to benefit a broad range of robotics communities, including robot learning, aerial robotics, underwater robotics, mobile manipulation, and robotic simulators. We will open-source our code and data to foster the advancement of research in these fields.
+                          </p>
+                        </div>
+                      </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+
+<div class="separator  small center  " style="margin-top:26px;margin-bottom:14px;width:66%;"></div>
+
+
+<div     class="vc_row wpb_row section  grid_section" style='background-color:#f8f8f8; padding-top:44px; padding-bottom:24px; text-align:left;'>
+    <div class=" section_inner clearfix">
+        <div class="wpb_text_column wpb_content_element ">
+            <div class="wpb_wrapper">
+                <h5 style="text-align: center; font-size: x-large">Robot and Simulator <span style="color: #13B3AC;">Features</span></h5>
+            </div>
+        </div>
+        <div class='qode_carousels_holder clearfix'>
+            <div class='qode_carousels light'>
+                <div class="column is-four-fifths">
+                    <div class="content has-text-justified abstract">
+                      <p>
+                          Below are slides detailing the features of our <span style="color: #13B3AC;">AAM</span> robot and <span style="color: #13B3AC;">SEALS</span> simulator. Click on a window to choose which one you’d like to explore first. Use your keyboard’s arrow keys to navigate: <span style="color: #13B3AC;">Right</span> and <span style="color: #13B3AC;">Left</span> arrows let you move across topics, while <span style="color: #13B3AC;">Up</span> and <span style="color: #13B3AC;">Down</span> arrows allow you to explore any vertical sub-slides within a topic. For a more immersive experience, simply <span style="color: #13B3AC;">hover</span> your mouse over a window. </p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Main container to hold both presentations -->
+    <div class="carousel-container">
+        <!-- First Reveal.js Presentation -->
+        <div class="reveal deck deck1">
+            <div class="slides">
+                <section data-background_overlay_color="white">
+                    <div class="slide-title">
+                        <p>Robot (AAM) Model</p>
+                        <div class="threeD-container" id="threeDModel">
+                            <img data-src="static/images/icon_mouse.png" style="width: 80px; height: auto; position: absolute; right:0px; top:52px;">
+                            <img data-src="static/images/icon-double-arrow.gif" style="width: 27px; height: auto; position: absolute; left:65px; top:44px;">
+<!--                            <img data-src="static/images/icon-double-arrow.gif" style="width: 27px; height: auto; position: absolute; left:137px; top:-30px; transform: rotate(90deg);">-->
+
+                        </div>
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="slide-title">
+                        <p style="font-size:20px;">AAM Cameras</p>
+                        <img style="width:80%" data-src="media/figures/AAM_Cameras.png">
+                    </div>
+                </section>
+
+                <section>
+                    <section>
+                        <div class="slide-title">
+                            <p style="font-size:20px;">AAM Control Framework</p>
+                            <img data-src="media/figures/AAM_Control.PNG">
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:20px;">Handeling the Change of Gravity Center</p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:20px;">Handeling the Change of Gravity Center</p>
+
+                            <video width="100%" controls autoplay muted loop>
+                                <source src="media/videos/hovering_demo1.mp4" type="video/mp4">
+                            </video>
+
+                            <img class="fragment" data-fragment-index="0" style="z-index: 1; position: fixed; top: 170px; left: 15px; height: 165px; width: auto; opacity: 0.8" data-src="media/figures/hovering_result.PNG">
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <p style="font-size:40px;">Thank You!</p>
+                </section>
+            </div>
+        </div>
+
+        <!-- Second Reveal.js Presentation -->
+        <div class="reveal deck deck2">
+            <div class="slides">
+                <section>
+                    <div class="slide-title">
+                        <p style="font-size:30px;">SEALS Simulator Overview</p>
+                        <img src="media/figures/SEALS_arch.PNG">
+                    </div>
+                </section>
+
+                <section>
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Aerodynamics</p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Aerodynamics</p>
+                            <p style="font-size:25px;">Developed a simplified linear drag force model based on <a href="https://arxiv.org/abs/2307.05263">Jacinto et al. (2023)</a></p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Aerodynamics</p>
+                            <p style="font-size:25px;">Developed a simplified linear drag force model based on <a href="https://arxiv.org/abs/2307.05263">Jacinto et al. (2023)</a></p>
+                            <p><span style="color: deeppink;">$F_d = c\vec{v}$</span></p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Aerodynamics</p>
+                            <p style="font-size:25px;">Developed a simplified linear drag force model based on <a href="https://arxiv.org/abs/2307.05263">Jacinto et al. (2023)</a></p>
+                            <p><span style="color: deeppink;">$F_d = c\vec{v}$</span></p>
+                            <p><span style="color: deeppink;">$\vec{v} =  \left [ \dot{x} , \dot{y}, \dot{z} \right ]$</span></p>
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Hydrodynamics</p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Hydrodynamics</p>
+                            <p style="font-size:25px;">Developed a rigid-body hydrodynamics based on <a href="https://arxiv.org/abs/2310.11927">Amer et al. (2023)</a></p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Hydrodynamics</p>
+                            <p style="font-size:25px;">Developed a rigid-body hydrodynamics based on <a href="https://arxiv.org/abs/2310.11927">Amer et al. (2023)</a></p>
+                            <p><span style="color: deeppink;">Efficient but less (visually) realistic</span></p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Hydrodynamics</p>
+                            <p style="font-size:25px;">Developed a rigid-body hydrodynamics based on <a href="https://arxiv.org/abs/2310.11927">Amer et al. (2023)</a></p>
+                            <p><span style="color: deeppink;">Efficient but less (visually) realistic</span></p>
+                            <p style="font-size:25px;">Developed a particle-based hydrodynamics based on <a href="https://mmacklin.com/uppfrta_preprint.pdf">Macklin et al. (2014)</a> in Isaac Sim</p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Hydrodynamics</p>
+                            <p style="font-size:25px;">Developed a rigid-body hydrodynamics based on <a href="https://arxiv.org/abs/2310.11927">Amer et al. (2023)</a></p>
+                            <p><span style="color: deeppink;">Efficient but less (visually) realistic</span></p>
+                            <p style="font-size:25px;">Developed a particle-based hydrodynamics based on <a href="https://mmacklin.com/uppfrta_preprint.pdf">Macklin et al. (2014)</a> in Isaac Sim</p>
+                            <p><span style="color: deeppink;">Realistic but less efficient</span></p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate="">
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Comparison of the two Hydrodynamics</p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:15px;">Comparison of the two Hydrodynamics</p>
+                            <p style="font-size:30px;">Rigid-body Hydrodynamics</p>
+                            <video width="100%" controls autoplay muted loop>
+                            <source src="media/videos/AAM_SEAL_7.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:15px;">Comparison of the two Hydrodynamics</p>
+                            <p style="font-size:30px;">Particle-based Hydrodynamics</p>
+                            <video width="100%" controls autoplay muted loop>
+                            <source src="media/videos/AAM_SEAL_8.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Simulator Realism</p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Simulator Realism</p>
+                            <p style="font-size:25px;">Realistic Air-Water Transitions</p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Simulator Realism</p>
+                            <p style="font-size:20px;">Realistic Air-Water Transitions</p>
+                            <p style="font-size:25px;">Realistic Underwater Observation</p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:30px;">Simulator Realism</p>
+                            <p style="font-size:20px;">Realistic Air-Water Transitions</p>
+                            <p style="font-size:20px;">Realistic Underwater Observation</p>
+                            <p style="font-size:25px;">Realistic Aquatic Animals</p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:20px;">Realistic Air-Water Transitions -- Dropping</p>
+
+                            <video width="100%" controls autoplay muted loop>
+                                <source src="media/videos/Air_Water_Transition_Demo.mp4" type="video/mp4">
+                            </video>
+
+                            <img class="fragment" data-fragment-index="0" style="z-index: 1; position: fixed; top: 150px; left: 120px; height: 220px; width: auto; opacity: 0.8" data-src="media/figures/air_water_acceleration.png">
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:20px;">Realistic Air-Water Transitions -- Waves</p>
+
+                            <video width="100%" controls autoplay muted loop>
+                                <source src="media/videos/Wave_Demo_Short_2.mp4" type="video/mp4">
+                            </video>
+
+                            <img class="fragment" data-fragment-index="0" style="z-index: 1; position: fixed; top: 150px; left: 120px; height: 220px; width: auto; opacity: 0.8" data-src="media/figures/wave_acc_plot.png">
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:20px;">Realistic Underwater Observation</p>
+                            <p style="font-size:30px;">Diminishing Light Intensity: The Effect of Depth on Underwater Visibility</p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:12px;">Realistic Underwater Observation</p>
+                            <p style="font-size:12px;">Diminishing Light Intensity: The Effect of Depth on Underwater Visibility</p>
+                            <video width="100%" controls autoplay muted loop>
+                                <source src="media/videos/underwater_light_attenuation.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:20px;">Realistic Underwater Observation</p>
+                            <p style="font-size:30px;">Wavelength Absorption: Depth-Dependent Color Shift and Blurriness</p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:12px;">Realistic Underwater Observation</p>
+                            <p style="font-size:12px;">Wavelength Absorption: Depth-Dependent Color Shift and Blurriness</p>
+                            <img data-src="media/figures/lighting_1.png">
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:20px;">Realistic Underwater Observation</p>
+                            <p style="font-size:30px;">Caustics: The Play of Light and Shadow in Water</p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:12px;">Realistic Underwater Observation</p>
+                            <p style="font-size:12px;">Caustics: The Play of Light and Shadow in Water</p>
+                            <img data-src="media/figures/lighting_2.png">
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:20px;">Realistic Aquatic Animals</p>
+                            <p style="font-size:30px;">Fully Controllable and Learnable Animal Behaviors</p>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:12px;">Realistic Aquatic Animals</p>
+                            <p style="font-size:12px;">Fully Controllable and Learnable Animal Behaviors</p>
+                            <video width="100%" controls autoplay muted loop>
+                                <source src="media/videos/Moving_Crab.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="slide-title">
+                            <p style="font-size:10px;">Realistic Aquatic Animals</p>
+                            <p style="font-size:10px;">Fully Controllable and Learning Animal Behaviors</p>
+                            <video width="100%" controls autoplay muted loop>
+                                <source src="media/videos/AAM_catches_animal_in_water_3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <p style="font-size:40px;">Thank You!</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+<!--    <div class="carousel-container">-->
+<!--    &lt;!&ndash; Left Carousel with only Prev button &ndash;&gt;-->
+<!--    <div class="carousel carousel-left" id="carousel1">-->
+<!--        <div class="carousel-slides">-->
+
+<!--&lt;!&ndash;            <div class="slide">&ndash;&gt;-->
+<!--&lt;!&ndash;                &lt;!&ndash; 3D Model Container for URDF Robot &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                <div id="threeDModel" class="threeD-container"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            This does not work. See the code below for correction&ndash;&gt;-->
+
+<!--            <div class="threeD-container slide-c" id="threeDModel">-->
+<!--            </div>-->
+
+<!--            <div class="slide-c">-->
+<!--                <img src="media/figures/AAM_Cameras.png">-->
+<!--            </div>-->
+<!--            <div class="slide-c">-->
+<!--                <img src="media/figures/AAM_Control.PNG">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <button class="prev" onclick="slidePrev('carousel1')">&#10094;</button>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Right Carousel with only Next button &ndash;&gt;-->
+<!--    <div class="carousel carousel-right" id="carousel2">-->
+<!--        <div class="carousel-slides">-->
+<!--            <div class="slide-c">-->
+<!--                <div class="slide-title">Overview of Simulator</div>-->
+<!--                <img src="media/figures/SEALS_arch.PNG" alt="Media 4">-->
+<!--            </div>-->
+<!--            <div class="slide-c">-->
+<!--&lt;!&ndash;                <div class="slide-title">AAM-Water Interaction</div>&ndash;&gt;-->
+<!--                <video class="video" controls="controls" preload="auto" loop autoplay muted><source type="video/mp4" src="media/videos/Air_Water_Transition_Demo.mp4"></video>-->
+<!--            </div>-->
+<!--            <div class="slide-c">-->
+<!--&lt;!&ndash;                <div class="slide-title">AAM-Wave Interaction</div>&ndash;&gt;-->
+<!--                <video class="video" controls="controls" preload="auto" loop autoplay muted><source type="video/mp4" src="media/videos/Wave_Demo_Short_2.mp4"></video>-->
+<!--            </div>-->
+<!--            <div class="slide-c">-->
+<!--                <video class="video" controls="controls" preload="auto" loop autoplay muted><source type="video/mp4" src="media/videos/underwater_light_attenuation.mp4"></video>-->
+<!--            </div>-->
+
+<!--            <div class="slide-c">-->
+<!--                <img src="media/figures/lighting_1.png">-->
+<!--            </div>-->
+<!--            <div class="slide-c">-->
+<!--                <img src="media/figures/lighting_2.png">-->
+<!--            </div>-->
+<!--            <div class="slide-c">-->
+<!--                <video class="video" controls="controls" preload="auto" loop autoplay muted><source type="video/mp4" src="media/videos/Moving_Crab.mp4"></video>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <button class="next" onclick="slideNext('carousel2')">&#10095;</button>-->
+<!--    </div>-->
+<!--</div>-->
+
+<div class="separator  small center  " style="margin-top:66px;margin-bottom:14px;width:66%;"></div>
+
+
+<div     class="vc_row wpb_row section  grid_section" style='background-color:#f8f8f8; padding-top:44px; padding-bottom:24px; text-align:left;'>
+    <div class=" section_inner clearfix">
+        <div class="wpb_text_column wpb_content_element ">
+            <div class="wpb_wrapper">
+                <h5 style="text-align: center; font-size: x-large">Potential and Broader <span style="color: #13B3AC;">Applications</span></h5>
+            </div>
+        </div>
+        <div class='qode_carousels_holder clearfix'>
+            <div class='qode_carousels light'>
+                <div class="content has-text-justified abstract">
+                  <p>
+                      Aerial-Aquatic Manipulators offer efficient solutions across many fields by combining flight and underwater capabilities. In <span style="color: #13B3AC;">aquaculture</span>, they perform aerial surveys and underwater inspections, ensuring optimal conditions while quickly addressing issues in hard-to-reach areas. In <span style="color: #13B3AC;">marine biology</span>, they enable non-invasive sampling and data collection, minimizing disturbance to ecosystems. For inland aquaculture, AAMs provide capabilities for monitoring and maintenance, especially, in isolated water bodies where frequent access to various water areas is challenging. Their ability to seamlessly transition between air and water also enhances <span style="color: #13B3AC;">infrastructure inspection</span>, reducing downtime and improving safety by avoiding the risks associated with underwater environments. Additionally, AAMs are highly effective for <span style="color: #13B3AC;">aquatic litter/hazmat removal</span> and <span style="color: #13B3AC;">undersea search and rescue</span> missions, where their dual capabilities allow them to swiftly locate and assist in hazardous situations, ensuring both environmental health and mission success. </p>
+                    <img src="media/figures/AAM_Impact.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="separator  transparent   " style="margin-top:24px;margin-bottom:160px;">
+<div     class="vc_row wpb_row section  grid_section" style='padding-top:44px; padding-bottom:24px; text-align:left;'>
+    <div class=" section_inner clearfix">
+                <div class="abstract">
+            <p>Website designed by an anonymous author</p>
+            <p>Contact: </p>
+        </div>
+        </div>
+        </div>
+    </div>
+
+<div   data-q_id="#about_us"  data-q_title="AAM-SEALS: Developing Aerial-Aquatic Manipulators in SEa, Air, and Land Simulator"  data-q_icon="no" class="vc_row wpb_row section  grid_section in_content_menu" style='background-color:#ffffff; padding-top:0px; padding-bottom:0px; text-align:center;'>
+
+</div>
+
+</footer>
+
+</div>
+</div>
+
+<!-- Instagram Feed JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://tigerhousefilms.com/wp-admin/admin-ajax.php";
+</script>
+<script type="text/javascript" id="qode-like-js-extra">
+/* <![CDATA[ */
+var qodeLike = {"ajaxurl":"https:\/\/tigerhousefilms.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="//zone1-1d947.kxcdn.com/wp-content/themes/nouveau/js/qode-like.js?ver=1.0" id="qode-like-js"></script>
+<script type="text/javascript" src="//zone1-1d947.kxcdn.com/wp-content/themes/nouveau/js/plugins.js?ver=6.6.2" id="plugins-js"></script>
+<script type="text/javascript" src="//zone1-1d947.kxcdn.com/wp-content/themes/nouveau/js/jquery.carouFredSel-6.2.1.js?ver=6.6.2" id="carouFredSel-js"></script>
+<script type="text/javascript" src="//zone1-1d947.kxcdn.com/wp-content/themes/nouveau/js/jquery.mousewheel.min.js?ver=6.6.2" id="mousewheel-js"></script>
+<script type="text/javascript" src="//zone1-1d947.kxcdn.com/wp-content/themes/nouveau/js/jquery.touchSwipe.min.js?ver=6.6.2" id="touchSwipe-js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjLb159iOKx78Jl0ybNJalBF4Vmn2IZpc&amp;ver=6.6.2" id="google_map_api-js"></script>
+<script type="text/javascript" src="https://tigerhousefilms.com/wp-content/themes/nouveau/js/default_dynamic.php?ver=6.6.2" id="default_dynamic-js"></script>
+<script type="text/javascript" src="//zone1-1d947.kxcdn.com/wp-content/themes/nouveau/js/default.min.js?ver=6.6.2" id="default-js"></script>
+<script type="text/javascript" src="https://tigerhousefilms.com/wp-content/themes/nouveau/js/custom_js.php?ver=6.6.2" id="custom_js-js"></script>
+<script type="text/javascript" src="//zone1-1d947.kxcdn.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.7" id="wpb_composer_front_js-js"></script>
+<script type="text/javascript" id="sbi_scripts-js-extra">
+/* <![CDATA[ */
+var sb_instagram_js_options = {"font_method":"svg","resized_url":"https:\/\/tigerhousefilms.com\/wp-content\/uploads\/sb-instagram-feed-images\/","placeholder":"\/\/zone1-1d947.kxcdn.com\/wp-content\/plugins\/instagram-feed\/img\/placeholder.png","ajax_url":"https:\/\/tigerhousefilms.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="//zone1-1d947.kxcdn.com/wp-content/plugins/instagram-feed/js/sbi-scripts.min.js?ver=6.5.1" id="sbi_scripts-js"></script>
+
+
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<!-- Include Three.js, URDFLoader, and OrbitControls -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module" src="static/js/URDFLoader.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/lil-gui"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Reveal.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
+
+    <script>
+        let scene, camera, renderer, robot, controls, is3DModelFocused = false;
+
+function placeGUIInThreeDContainer(gui) {
+    console.log('placeGUIInThreeDContainer called');
+
+    // Select the .threeD-container
+    const threeDContainer = document.querySelector('.threeD-container');
+    console.log('.threeD-container:', threeDContainer);
+
+    if (threeDContainer) {
+        // Add the GUI to the .threeD-container
+        threeDContainer.appendChild(gui.domElement);
+
+        setTimeout(() => {
+           gui.close();
+           gui.open();
+        }, 10);
+
+        // Style the GUI to position it within or relative to the .threeD-container
+        gui.domElement.style.position = 'absolute';
+        gui.domElement.style.top = '-70px'; // Adjust as needed
+        gui.domElement.style.left = '0px'; // Adjust as needed
+        gui.domElement.style.zIndex = '1000'; // Ensure it appears above other elements
+        gui.domElement.style.backgroundColor = 'rgba(0, 0, 0, 0)'; // Optional: Make it stand out
+        gui.domElement.style.padding = '5px'; // Optional: Add padding for better UI
+
+        // Set the size limit for the GUI window
+        gui.domElement.style.width = '153px';  // Set the desired width
+        gui.domElement.style.height = '140px'; // Set the desired height
+
+        // Change the font color and size for the entire GUI
+        gui.domElement.style.fontSize = '12px'; // Set the font size
+        gui.domElement.style.color = 'white';   // Set the font color
+        gui.domElement.style.fontWeight = 'bold'; // Make the font bold
+
+        // Optionally fold the GUI by default
+        gui.close(); // This will collapse the GUI upon initialization
+
+        console.log('GUI placed in .threeD-container.');
+    } else {
+        console.error('.threeD-container not found. GUI placement failed.');
+    }
+}
+
+function setupJointControls(robot) {
+    const gui = new lil.GUI(); // Create a GUI instance
+    const jointControls = {}; // Store the controls for each joint
+
+    robot.traverse((child) => {
+        if (child.isURDFJoint && (child.jointType === 'revolute' || child.jointType === 'continuous')) {
+            const jointName = child.name || `Joint-${Math.random()}`; // Fallback for missing names
+            console.log(`Setting up control for joint: ${jointName}`);
+
+            jointControls[jointName] = { angle: 0 };
+
+            // Set default limits for `continuous` joints (allow full rotation)
+            const lowerLimit = child.jointType === 'continuous' ? -Math.PI : child.limit?.lower ?? -Math.PI;
+            const upperLimit = child.jointType === 'continuous' ? Math.PI : child.limit?.upper ?? Math.PI;
+
+            // Add a slider for the joint
+            gui.add(jointControls[jointName], 'angle', lowerLimit, upperLimit)
+                .name(jointName)
+                .onChange((value) => {
+                    child.setJointValue(value); // Update the joint rotation
+                    renderer.render(scene, camera); // Re-render the scene
+                });
+        }
+    });
+
+    // Wait for the left sub-window (deck1) to be ready, then place the GUI
+    placeGUIInThreeDContainer(gui);
+
+    console.log('Joint controls:', jointControls);
+}
+
+
+
+
+        function init3D() {
+            // Set up Three.js basics
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0xe0e0e0); // Light gray background
+
+            // Camera setup
+            camera = new THREE.PerspectiveCamera(60, window.innerWidth / 500, 0.1, 1000);
+            camera.position.set(0.9, 0.9, 0.9); // Position camera
+
+            // Renderer setup
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            const threeDContainer = document.getElementById('threeDModel');
+            threeDContainer.appendChild(renderer.domElement);
+
+            // Lighting
+            const ambientLight = new THREE.AmbientLight(0x606060, 1.5);
+            scene.add(ambientLight);
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+            directionalLight.position.set(5, 10, 7.5).normalize();
+            scene.add(directionalLight);
+
+            // Load URDF
+            const loader = new URDFLoader();
+            loader.load(
+                'https://aam-seals.github.io/aam-seals-v1/media/drone_gripper_1/urdf/drone_gripper_11.urdf',
+                (urdf) => {
+                    robot = urdf;
+                    scene.add(robot);
+                    robot.rotation.x = -3*Math.PI/4; // Rotate for visibility
+                    robot.rotation.y = -Math.PI/4; // Rotate for visibility
+
+                    robot.scale.set(3, 3, 3);
+
+                    // Set up joint controls
+                    setupJointControls(robot);
+
+                    resizeRenderer(); // Ensure initial rendering
+                    renderer.render(scene, camera);
+                },
+                undefined,
+                (error) => {
+                    console.error('Error loading URDF:', error);
+                }
+            );
+
+            // OrbitControls
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableZoom = true;
+            controls.enablePan = true;
+            controls.enabled = false;
+
+            threeDContainer.addEventListener('mouseenter', () => {
+                controls.enabled = true;
+            });
+            threeDContainer.addEventListener('mouseleave', () => {
+                controls.enabled = false;
+            });
+
+            animate();
+        }
+
+        function resizeRenderer() {
+            const threeDContainer = document.getElementById('threeDModel');
+            if (threeDContainer) {
+                const containerWidth = threeDContainer.offsetWidth;
+                const containerHeight = threeDContainer.offsetHeight;
+                renderer.setSize(containerWidth, containerHeight);
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                camera.aspect = containerWidth / containerHeight;
+                camera.updateProjectionMatrix();
+            }
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        // Initialize Reveal.js and add event listeners
+        function setupRevealAnd3D() {
+            // Create and initialize the first Reveal.js instance
+            let deck1 = new Reveal(document.querySelector('.deck1'), {
+                embedded: true,
+                keyboardCondition: 'focused',
+                controls: true,
+                progress: true,
+                slideNumber: true,
+                transition: 'slide',
+                width: '100%',
+                height: '100%',
+                margin: 0,
+    <!--            autoSlide: 5000,-->
+    <!--            loop: true,-->
+    <!--            minScale: 1,-->
+    <!--            maxScale: 1,-->
+
+            });
+            deck1.initialize();
+            console.log('Reveal.js deck1 initialized');
+
+            // Create and initialize the second Reveal.js instance
+            let deck2 = new Reveal(document.querySelector('.deck2'), {
+                embedded: true,
+                controls: true,
+                progress: true,
+                slideNumber: true,
+                transition: 'slide',
+                width: '100%',
+                height: '100%',
+                margin: 0,
+    <!--            autoSlide: 5000,-->
+    <!--            loop: true,-->
+    <!--            plugins: [ RevealMath.KaTeX ],-->
+
+
+            });
+            deck2.initialize();
+
+            // Wait for the deck to be ready and initialize 3D rendering
+            deck1.getRevealElement().addEventListener('ready', () => {
+                resizeRenderer();
+                renderer.render(scene, camera);
+            });
+
+            // Handle slide change to re-render the robot
+            deck1.getRevealElement().addEventListener('slidechanged', (event) => {
+                const threeDContainer = document.getElementById('threeDModel');
+                if (event.currentSlide.contains(threeDContainer)) {
+                    resizeRenderer();
+                    renderer.render(scene, camera);
+                }
+            });
+
+            // Initialize the 3D scene
+            init3D();
+        }
+
+        // Initialize everything after the page loads
+        window.onload = () => {
+            setupRevealAnd3D();
+        };
+
+    </script>
+
+    <script>
+        function toggleZoom(elementId) {
+    const videoContainer = document.getElementById(elementId);
+
+    if (videoContainer.classList.contains("zoomed")) {
+        // Reverse zoom-in by applying zoom-out animation
+        videoContainer.classList.remove("zoomed");
+        videoContainer.classList.add("unzoomed");
+    } else {
+        // Zoom in
+        videoContainer.classList.remove("unzoomed");
+        videoContainer.classList.add("zoomed");
+    }
+}
+
+
+    </script>
+<!--    <script>-->
+<!--        document.addEventListener("DOMContentLoaded", function () {-->
+<!--        // Locate the carousel and ensure it starts on the first slide (the 3D model)-->
+<!--        const carouselSlides = document.querySelector("#deck1 .slides");-->
+<!--        carouselSlides.style.transform = "translateX(0%)"; // Set to first slide-->
+
+<!--        // Locate the 3D model container and initialize the 3D model-->
+<!--        const container = document.getElementById("threeDModel");-->
+<!--        if (container) {-->
+<!--            initialize3DModel(container);-->
+<!--        }-->
+<!--    });-->
+
+<!--    // Function to initialize the 3D model in the provided container-->
+<!--    function initialize3DModel(container) {-->
+<!--        // Replace with your 3D setup, e.g., Three.js or another library-->
+<!--        console.log("Initializing 3D model...");-->
+<!--        // For example: let scene = new THREE.Scene(); ... (Three.js initialization code)-->
+<!--    }-->
+
+<!--    document.addEventListener("DOMContentLoaded", function() {-->
+<!--    const threeDModel = document.getElementById("threeDModel");-->
+<!--    if (threeDModel) {-->
+<!--        console.log("threeDModel is present:", threeDModel);-->
+<!--        console.log("Width:", threeDModel.offsetWidth, "Height:", threeDModel.offsetHeight);-->
+<!--    } else {-->
+<!--        console.error("threeDModel element not found.");-->
+<!--    }-->
+<!--});-->
+
+
+<!--    </script>-->
+
+</body>
+</html>
